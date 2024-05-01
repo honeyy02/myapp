@@ -4,6 +4,7 @@ import pingPrompts from "./pingPrompts";
 import rec_UserInputPrompts from "./REC-userinputs-steps";
 import RVF1 from "./RVF"
 import Read1  from "./Read";
+import Chapters from "./Shlok";
 
 // MAIN DIALOG FLOW
 const steps = [
@@ -53,6 +54,11 @@ const steps = [
         label: "Read a Shlok",
         trigger: "Read1",
       },
+      {
+        value: "Gita Chapters",
+        label: "Gita Chapters",
+        trigger: "Shlok",
+      },
     ],
   },
 
@@ -79,6 +85,7 @@ const steps = [
 
   // user input open prompts
   ...rec_UserInputPrompts,
+  ...Chapters,
 ];
 
 export default steps;
